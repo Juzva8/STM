@@ -1,0 +1,142 @@
+.contact{
+  background-image: url('../../Assets/Logo/Theme.jpg');
+  background-Position: center;
+  background-Size: cover;
+  background-Repeat: no-repeat;
+}
+.contact__background{
+background-color: #fafafa !important;
+opacity: 0.9;
+padding-bottom: 20px;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.contact__form > h1 {
+text-align: center;
+font-weight: bold;
+padding: 50px;
+}
+
+
+.form > input,
+textarea {
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  font-size: 16px;
+  color: black;
+  outline: none;
+}
+.contact__P{
+  padding-bottom: 40px;
+  text-align: center;
+ }
+
+.contact__form > input:focus,
+textarea:focus {
+  border: 1px solid black;
+  outline: none;
+}
+
+.contact__form > textarea {
+  height: 150px;
+  max-width: 400px;
+  min-height: 100px;
+}
+
+.contact__form > label {
+  padding-bottom: 10px;
+  color: black;
+  font-weight: bold;
+
+}
+
+.contact__form > button {
+  padding: 20px;
+  border: none;
+  background-color: rgb(216, 188, 32);
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-top: 10px;
+  border: none;
+}
+
+.contact__form > button:hover {
+  background-color: #fafafa;
+  color: black;
+  border: 2px solid GOLD;
+  font-weight:bolder;
+}
+.Contact__name{
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+
+
+
+@media (max-width:500px){
+  .contact{
+    background-color: #fafafa;
+    opacity: 0.75;
+    padding:10px;
+    align-items: center;
+  }
+
+  .contact__form {
+    height: 60vh;
+    justify-content: center;
+    width: 300px;
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+
+  }
+  .contact__form > h1 {
+    margin-bottom: 10px;
+  }
+  .form > input,
+  textarea {
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    background: #fff;
+    font-size: 18px;
+    color: black;
+    outline: none;
+  }
+  .contact__form > button {
+    padding: 10px;
+    background-color: rgb(216, 188, 32);
+    font-weight: 200;
+    font-size: 15px;
+    border-radius: 3px;
+    color: black;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+  }
+  .Contact__name{
+    margin:0px;
+    font-size:20px;
+  }
+  .contact__P{
+   padding-bottom: 40px;
+  }
+  .Contact__name{
+    padding-top: 20px;
+  }
+
+}
