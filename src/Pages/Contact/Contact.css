@@ -3,18 +3,28 @@
   background-Position: center;
   background-Size: cover;
   background-Repeat: no-repeat;
+  padding-bottom: 20px;
 }
-.contact__background{
+/* .contact__background{
 background-color: #fafafa !important;
 opacity: 0.8;
 padding-bottom: 20px;
-}
+} */
 .contact__form {
   display: flex;
+  background-color: #fafafa !important;
+  opacity: 0.8;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
   width: 400px;
   margin: 0 auto;
+  margin-top: 66px;
+}
+
+.contact__form > label{
+  padding-left: 15px;
+  padding-top: 10px;
 }
 
 .contact__form > h1 {
@@ -29,9 +39,9 @@ textarea {
   padding: 20px;
   border-radius: 3px;
   margin-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid gold;
   font-size: 16px;
-  color: black;
+  color: gold;
   outline: none;
 }
 .contact__P{
@@ -41,7 +51,7 @@ textarea {
 
 .contact__form > input:focus,
 textarea:focus {
-  border: 1px solid black;
+  border: 1px solid gold;
   outline: none;
 }
 
@@ -53,7 +63,7 @@ textarea:focus {
 
 .contact__form > label {
   padding-bottom: 10px;
-  color: black;
+  color: gold;
   font-weight: bold;
 
 }
@@ -74,7 +84,7 @@ textarea:focus {
 
 .contact__form > button:hover {
   background-color: #fafafa;
-  color: black;
+  color: gold;
   border: 2px solid GOLD;
   font-weight:bolder;
 }
@@ -82,6 +92,14 @@ textarea:focus {
   text-align: center;
   margin-top: 30px;
   padding-bottom: 10px;
+  color: gold;
+}
+
+.contact__P {
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  color: gold;
 }
 
 
@@ -111,10 +129,10 @@ textarea:focus {
     padding: 10px;
     border-radius: 3px;
     margin-bottom: 5px;
-    border: 1px solid black;
+    border: 1px solid gold;
     background: #fff;
     font-size: 18px;
-    color: black;
+    color: gold;
     outline: none;
   }
   .contact__form > button {
@@ -123,7 +141,7 @@ textarea:focus {
     font-weight: 200;
     font-size: 15px;
     border-radius: 3px;
-    color: black;
+    color: gold;
     margin-top: 5px;
     border: none;
     outline: none;
@@ -131,12 +149,17 @@ textarea:focus {
   .Contact__name{
     margin:0px;
     font-size:20px;
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    color: gold;
   }
-  .contact__P{
-   padding-bottom: 40px;
-  }
-  .Contact__name{
-    padding-top: 20px;
-  }
+    
+    .contact__P {
+      text-align: center;
+      margin-top: 30px;
+      padding-bottom: 10px;
+      color: gold;
+    }
 
 }
