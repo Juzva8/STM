@@ -4,6 +4,7 @@
     position: sticky; 
     background-color:black;
     z-index: 100;
+    padding-top: 10px;
     top: 0;
  
 }

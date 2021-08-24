@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css'
-import './Header.css'
+
 
 function Header() {
     return (

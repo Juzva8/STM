@@ -9,15 +9,13 @@ function App() {
   return (
     <Router>
       <Header />
- <Switch>
+      <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/home' exact component={Home} />
 
         <Route path='/Contact' exact component={Contact} />
       </Switch>
       <Footer />
-
-
       </Router>
   );
 }
