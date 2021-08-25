@@ -6,6 +6,37 @@
     height: 700px;
 }
 
+.about__h1{
+    text-align: center;
+    padding:20px;
+    margin-bottom: 40px;
+}
+.about__h5{
+    color: gold;
+    
+}
+
+.about__h6{
+    margin-top: 40px;
+    
+}
+.about__p{
+    margin-top: 40px;
+}
+
+.css-typing
+{   
+    font-family: "Courier";
+    font-size: 14px;
+    width: 50em;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(40, end);
+    animation: type 5s steps(40, end);
+}
+
+
+
 @media (max-width:500px){
     .about{
         background-color: #fafafa;
@@ -22,7 +53,11 @@
         margin: 5px!important;
         font-size: 20px !important;
     }
-
+    
+    .about__h6{
+        margin: 5px!important;
+        font-size: 20px !important;
+    }
     h6{
         text-align: center;
         padding: 20px;
