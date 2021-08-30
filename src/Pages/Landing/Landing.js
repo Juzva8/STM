@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import './Landing.css';
 import artist from '../../Assets/main.jpg';
 
 
