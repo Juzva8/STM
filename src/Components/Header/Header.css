@@ -2,15 +2,17 @@
 .Header{
     width:100%;
     position: sticky; 
-    background-color:black;
     z-index: 100;
-    padding-top: 10px;
     top: 0;
 }
 
 a:hover{
     color: gold;
 }
+
+#header__home > img{
+    height: 90px;    
+ }
 
 .navbar {
     background-color:black;
@@ -31,13 +33,26 @@ a:hover{
     font-family: 'Proza Libre', sans-serif;
     font-size: medium;
     display: flex;
-    padding-right: 20px;
-    /* flex: 1; */
+    padding-right: 40px;
     justify-content: flex-end;
 }
 .Navbar:hover{
     color: gold;
 }
+.navbar-toggler-icon{
+  background-color: rgb(255, 255, 255);
+  height: 4px;
+  margin-bottom: 2px;
+}
+.navbar-toggler {
+    padding: .15rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: gold;
+    border: 0px solid transparent;
+    border-radius: .5rem;
+}
+
 
   @media (max-width:500px){
     .img{

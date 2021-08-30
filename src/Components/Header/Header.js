@@ -1,14 +1,18 @@
-import React from 'react'
-import { Navbar, Nav } from 'react-bootstrap';
+import React from 'react';
+import { Navbar, Nav, NavLink } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css'
+import Logo from '../../Assets/Logo/Logo.png' 
+
+
 
 
 function Header() {
+
     return (
         <div className="Header">
        <Navbar collapseOnSelect expand="lg" bg="black" variant="black">
-    <Navbar.Brand href="/">STRATTON TERRACE MARKETING</Navbar.Brand>
+       <NavLink id="header__home" href="/"><img src={Logo} alt="Website"/></NavLink>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
