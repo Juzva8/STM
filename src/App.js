@@ -19,6 +19,7 @@ function App() {
         <Route path='/home' exact component={Home} >
             <Header />
             <Home />
+
           </Route>
       </Switch>
 
