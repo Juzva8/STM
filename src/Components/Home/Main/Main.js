@@ -4,6 +4,8 @@ import photo from '../../../Assets/Svg/photo-icon.svg'
 import video from '../../../Assets/Svg/Video-icon.svg'
 import event from '../../../Assets/Svg/Event-icon.svg'
 import articles from '../../../Assets/Svg/articles-icon.svg'
+import Ellipsis from '../../../Assets/Svg/ellipsis.svg'
+import Kokse from '../../../Assets/Gallery/Kokse.jpg'
 
 const Main = (props) => {
   return <Container>
@@ -31,8 +33,25 @@ const Main = (props) => {
     <span>Articles</span>
     </button>
     </div>
-
     </ShareBox>
+    <div>
+        <Article>
+            <SharedActor>
+            <a>
+               <img src={user} alt=""/>
+               <div>
+                   <span>Title</span>
+                   <span>Info</span>
+                   <span>Date</span>
+               </div>
+            </a>
+            <button>
+            <img src={Ellipsis} alt=""/>
+            </button>
+            </SharedActor>
+        </Article>
+    </div>
+
   </Container>;
 };
 
@@ -101,12 +120,69 @@ const ShareBox = styled(CommonCard)`
                     }
                     span {
                         color: gold;
-                    }
+                }
             }
-                
         }
     }
 `
+const Article = styled(CommonCard)`
+
+        padding: 0px;
+        margin: 0 0 8px;
+        overflow: visible;
+`
+
+
+const SharedActor = styled.div`
+        padding-right: 40px;
+        flex-wrap: nowrap;
+        padding: 12px 16px 0;
+        margin-bottom: 8px;
+        align-items: center;
+        display: flex;
+            a {
+                margin-right: 12px;
+                flex-grow: 1;
+                overflow: hidden;
+                display: flex;
+                text-decoration: none;
+
+                    img{ 
+                        width: 48px;
+                        height: 48px;
+                }
+                & > div {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    flex-basis: 0;
+                    margin-left: 8px;
+                    overflow: hidden;
+                span{
+                    text-align: left;
+                    &:first-child {
+                        font-size: 14px;
+                        font-weight:700;s
+                        color: rgb(0, 0, 0, 1); 
+                        }
+                        &:nth-child(n+1){
+                            font-size: 12px;
+                            color: rgb(0, 0, 0, 0.6); 
+                        }
+                    }
+                }
+            }
+                    button {
+                        position: absolute;
+                        right: 12px;
+                        top: 0;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                    }
+
+`
+
 
 
 

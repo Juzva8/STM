@@ -17,7 +17,7 @@ const Rightside = (props) => {
               <Avatar />
             </a>
             <div>
-              <span>#Linkedin</span>
+              <span>#STM</span>
               <button>Follow</button>
             </div>
           </li>

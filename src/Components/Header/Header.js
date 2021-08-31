@@ -164,7 +164,6 @@ const Header = (props) => {
         left: 0;
         bottom: 0;
         text-align: center;
-        al
         background: white;
         width: 100%;
       }
@@ -237,6 +236,11 @@ const Header = (props) => {
       text-align: center;
       justify-content: center;
       display: none;
+      @media (max-width: 768px) {
+        top: 50px;
+        height: 30px;
+        font-size: 14px;
+      }
     `;
     
     const User = styled(NavList)`
