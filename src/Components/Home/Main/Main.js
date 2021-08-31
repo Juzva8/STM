@@ -5,6 +5,10 @@ import video from '../../../Assets/Svg/Video-icon.svg'
 import event from '../../../Assets/Svg/Event-icon.svg'
 import articles from '../../../Assets/Svg/articles-icon.svg'
 import Ellipsis from '../../../Assets/Svg/ellipsis.svg'
+import comments from '../../../Assets/Svg/comments.svg'
+import like from '../../../Assets/Svg/like.svg'
+import send from '../../../Assets/Svg/Send.svg'
+import share from '../../../Assets/Svg/share.svg'
 import Kokse from '../../../Assets/Gallery/Kokse.jpg'
 
 const Main = (props) => {
@@ -49,6 +53,46 @@ const Main = (props) => {
             <img src={Ellipsis} alt=""/>
             </button>
             </SharedActor>
+            <Description> 
+                Description
+            </Description>
+            <SharedImg>
+                <a>
+                    <img src={Kokse} alt=""/>
+                </a>
+            </SharedImg>
+            <SocialCounts>
+                <li>
+                    <button>
+                         <img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt=""/>
+                         <img src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt=""/>
+                         <span>75</span>
+                    </button>
+                </li>
+                <li>
+                    <a>
+                        2 comments
+                    </a>
+                </li>
+            </SocialCounts>
+            <SocialActions> 
+                <button> 
+                <img src={like} alt=""/>
+                <span>Like</span>
+                </button>
+                <button> 
+                <img src={comments} alt=""/>
+                <span>Comment</span>
+                </button>
+                <button> 
+                <img src={share} alt=""/>
+                <span>Share</span>
+                </button>
+                <button> 
+                <img src={send} alt=""/>
+                <span>Send</span>
+                </button>
+                </SocialActions> 
         </Article>
     </div>
 
@@ -69,7 +113,7 @@ const CommonCard = styled.div`
     position: relative;
     border: none;
     box-shadow: 0 0 0 1px rgba(0 0 0 / 15%), 0 0 0 1px rgba(0 0 0 / 20%);
-`
+`;
 const ShareBox = styled(CommonCard)`
     display: flex;
     flex-direction: column;
@@ -124,13 +168,13 @@ const ShareBox = styled(CommonCard)`
             }
         }
     }
-`
+`;
 const Article = styled(CommonCard)`
 
         padding: 0px;
         margin: 0 0 8px;
         overflow: visible;
-`
+`;
 
 
 const SharedActor = styled.div`
@@ -181,12 +225,68 @@ const SharedActor = styled.div`
                         outline: none;
                     }
 
-`
+`;
 
+            const Description = styled.div` 
+            padding: 0 16px;
+            overflow: hidden;
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 14px;
+            text-align: left;
 
+            `;
 
+            const SharedImg = styled.div` 
+            margin-top: 8px;
+            width: 100%;
+            display: block;
+            position: relative;
+            background-color: #f9fafb;
+                    img{
+                        object-fit: contain;
+                        width: 100%;
+                        height: 100%;
+                    }
+            `;
 
+            
+            const SocialCounts = styled.ul`  
+            line-height: 1.3;
+            display: flex;
+            align-items: flex-start;
+            overflow: auto;
+            margin: 0 16px;
+            padding: 8px 0;
+            border-bottom: 1px solid #e9e5df;
+            list-style: none;
+                    li {
+                        margin-right: 5px;
+                        font-size: 12px;
+                    }
+                    button{
+                        display: flex;
+                    }
+            `
 
+            const SocialActions = styled.div`
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            min-height: 40px;
+            padding: 4px 8px;
+                button {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 8px 10px;color: black;
 
+                    @media(min-width: 768px) {
+                       span{
+                        margin-left: 8px;
+                    }                        
+                }
+            }
+
+            `
 
 export default Main;
