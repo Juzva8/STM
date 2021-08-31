@@ -1,17 +1,18 @@
 import React from 'react';
 import { Navbar, Nav, NavLink } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './NavBar.css'
+import './Login.css'
 import Logo from '../../Assets/Logo/Logo.png' 
+import { connect } from "react-redux"
 
 
 
-    const NavBar = (props) => {
+    const Login = (props) => {
 
     return (
-        <div className="NavBar">
+        <div className="Login">
        <Navbar collapseOnSelect expand="lg" bg="black" variant="black">
-       <NavLink id="NavBar__home" href="/"><img src={Logo} alt="Website"/></NavLink>
+       <NavLink id="Login__home" href="/"><img src={Logo} alt="Website"/></NavLink>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
@@ -19,6 +20,8 @@ import Logo from '../../Assets/Logo/Logo.png'
     <Nav.Link id="nav__item" href="/">Home</Nav.Link>
     <Nav.Link id="nav__item" href="/contact">Contact Us</Nav.Link>
     <Nav.Link id="nav__item" href="/singIn">Sing in</Nav.Link>
+    <Nav.Link id="nav__item" href="/singUn">Sing up</Nav.Link>
+    <Nav.Link id="nav__item" href="/singUnGoogle">Log in with google</Nav.Link>
     
       </Navbar.Collapse>
   </Navbar>
@@ -27,4 +30,13 @@ import Logo from '../../Assets/Logo/Logo.png'
     )
 }
 
-export default NavBar
+const mapStateToProps = (state) => {
+    return {};
+};
+
+const mapDispatchToProps = (dispatch) => ({});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
+
+

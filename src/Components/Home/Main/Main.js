@@ -282,7 +282,7 @@ const SharedActor = styled.div`
 
                     @media(min-width: 768px) {
                        span{
-                        margin-left: 8px;
+                            margin-left: 8px;
                     }                        
                 }
             }

@@ -1,26 +1,22 @@
 
-.NavBar{
+.Login{
     width:100%;
     position: sticky; 
     z-index: 100;
     top: 0;
+    background-color:black;
+    color: white;
 }
 
 a:hover{
     color: gold;
 }
 
-#NavBar__home > img{
+#Login__home > img{
     height: 90px;    
  }
 
-.navbar {
-    background-color:black;
-    color: white;
-    display: flex;
- }
-
- .NavBar__home{
+ .Login__home{
     outline: none;
     text-decoration: black;
  }
@@ -45,7 +41,7 @@ a:hover{
     margin-right: 40px;
     justify-content: flex-end;
 }
-.Navbar:hover{
+.Login:hover{
     color: gold;
 }
 .navbar-toggler-icon{
