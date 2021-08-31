@@ -32,54 +32,54 @@ const Header = (props) => {
             <Nav>
               <NavListWrap>
                 <NavList className="active">
-                  <a href="/#">
+                  <a href="/home">
                     <img src={house} alt="" />
                     <span>Home</span>
                   </a>
                 </NavList>
     
                 <NavList>
-                  <a href="/#">
+                  <a href="/home">
                     <img src={network} alt="" />
                     <span>My Network</span>
                   </a>
                 </NavList>
     
                 <NavList>
-                  <a href="/#">
+                  <a href="/home">
                     <img src={jobs} alt="" />
                     <span>Jobs</span>
                   </a>
                 </NavList>
     
                 <NavList>
-                  <a href="/#">
+                  <a href="/home">
                     <img src={messaging} alt="" />
                     <span>Messaging</span>
                   </a>
                 </NavList>
     
                 <NavList>
-                  <a href="/#">
+                  <a href="/home">
                     <img src={notifications} alt="" />
                     <span>Notifications</span>
                   </a>
                 </NavList>
     
                 <User>
-                  <a href="/#">
+                  <a href="/home">
                     <img src={user} alt="" />
                     <span>Me</span>
                     <img src={down} alt="" />
                   </a>
     
                   <SignOut>
-                    <a href="/#">Sign Out</a>
+                    <a href="/">Sign Out</a>
                   </SignOut>
                 </User>
     
                 <Work>
-                  <a href="/#">
+                  <a href="/home">
                     <img src={work} alt="" />
                     <span>
                       Work
@@ -163,6 +163,8 @@ const Header = (props) => {
         position: fixed;
         left: 0;
         bottom: 0;
+        text-align: center;
+        al
         background: white;
         width: 100%;
       }
@@ -176,8 +178,9 @@ const Header = (props) => {
         span:after {
           content: "";
           transform: scaleX(1);
-          border-bottom: 2px solid var(--white, #fff);
           bottom: 0;
+            text-align: center;
+          al
           left: 0;
           position: absolute;
           transition: transform 0.2s ease-in-out;
@@ -224,14 +227,15 @@ const Header = (props) => {
     
     const SignOut = styled.div`
       position: absolute;
-      top: 45px;
-      background: white;
-      border-radius: 0 0 5px 5px;
-      width: 100px;
+      top: 90px;
+      background: black;
+      border-radius: 5px;
+      width: 80px;
       height: 40px;
       font-size: 16px;
       transition-duration: 167ms;
       text-align: center;
+      justify-content: center;
       display: none;
     `;
     
