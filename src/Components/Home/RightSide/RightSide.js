@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import feed from '../../../Assets/Svg/feed-icon.svg'
 import right from '../../../Assets/Svg/right-icon.svg'
+import student from '../../../Assets/Gallery/Student.jpg'
 
 const Rightside = (props) => {
   return (
@@ -39,7 +40,7 @@ const Rightside = (props) => {
       </FollowCard>
       <BannerCard>
         <img
-          src="https://images.theconversation.com/files/102848/original/image-20151123-18264-j336wc.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+          src={student}
           alt=""
         />
       </BannerCard>

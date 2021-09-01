@@ -9,7 +9,7 @@ import comments from '../../../Assets/Svg/comments.svg'
 import like from '../../../Assets/Svg/like.svg'
 import send from '../../../Assets/Svg/Send.svg'
 import share from '../../../Assets/Svg/share.svg'
-import Kokse from '../../../Assets/Gallery/Kokse.jpg'
+import Kokse from '../../../Assets/Gallery/Goals.jpg'
 
 const Main = (props) => {
   return <Container>

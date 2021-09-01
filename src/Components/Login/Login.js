@@ -11,8 +11,8 @@ import { connect } from "react-redux"
 
     return (
         <div className="Login">
-       <Navbar collapseOnSelect expand="lg" bg="black" variant="black">
-       <NavLink id="Login__home" href="/"><img src={Logo} alt="Website"/></NavLink>
+    <Navbar collapseOnSelect expand="lg" bg="black" variant="black">
+    <NavLink id="Login__home" href="/"><img src={Logo} alt="Website"/></NavLink>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
