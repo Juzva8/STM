@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { connect } from 'react-redux'
-import { SignInAPI } from '../../actions/index'
+import { SignInAPI } from '../../actions'
+import { Redirect } from 'react-router'
 // import lacrosse from '../../Assets/main.jpg'
 import Logo from '../../Assets/Logo/STM.png'
 import google from '../../Assets/Svg/google.svg'
@@ -10,6 +11,7 @@ import hero from '../../Assets/Svg/login-hero.svg'
 const Login = (props) => {
   return (
     <Container>
+      { props.user && <Redirect to='/home' /> }
       <Nav>
         <a href="/">
           <img src={Logo} alt="" />
@@ -179,10 +181,13 @@ const Google = styled.button`
 `;
 
 
-
 const mapStateToProps = (state) => {
-    return {};
+    return {
+      user: state.userState.user,
+    };
 };
+
+
 
 const mapDispatchToProps = (dispatch) => ({ 
   signIn: () => dispatch(SignInAPI()),
