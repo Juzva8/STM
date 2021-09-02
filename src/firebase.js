@@ -1,5 +1,6 @@
 import firebase from "firebase"
-
+import {connect} from "react-redux"
+import { SignInAPI } from "./actions/index";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBZg4yVPzclt3l6M9jsgqO1aTeZ4HhwQ9c",
