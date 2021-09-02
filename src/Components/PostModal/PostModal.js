@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import closeIcon from "../../Assets/Svg/close-icon.svg"
 import user from "../../Assets/Svg/user.svg"
+import photo from "../../Assets/Svg/share-image.svg"
+import video from "../../Assets/Svg/share-video.svg"
+import shareComment from "../../Assets/Svg/share-comment.svg"
 
 
 const PostModal = (props) => {
@@ -18,6 +21,22 @@ const PostModal = (props) => {
                     <span>Name</span>
                 </UserInfo>
             </SharedContent>
+            <ShareCreation>
+                <AttachAssets>
+                    <AssetButton>
+                    <img src={photo} alt="" />
+                    </AssetButton>
+                    <AssetButton>
+                    <img src={video} alt="" />
+                    </AssetButton>
+                </AttachAssets>
+                <ShareComment>
+                <AssetButton>
+                    <img src={ShareComment} alt="" />
+                    Anyone
+                    </AssetButton>
+                </ShareComment>
+            </ShareCreation>
         </Content>
          </Container>
     };
@@ -100,10 +119,36 @@ const UserInfo = styled.div`
             line-height: 1.5;
             margin-left: 5px;
         }
+`
 
+const ShareCreation = styled.button`
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 24px 12px 16px;
+`
+
+const AssetButton = styled.div`
+        display: flex;
+        align-items: center;
+        height: 40px;
+        min-width: auto;
+        color: rgb(0, 0, 0, 0.5);
+`
+
+const AttachAssets = styled.div`
+        align-items: center;
+        display: flex;
+        padding-right: 8px;
+        ${AssetButton}{
+            width: 40px;
+        }
 `
 
 
+const ShareComment = styled.div`
+
+
+`
 
     export default PostModal;
 
