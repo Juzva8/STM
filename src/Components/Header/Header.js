@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { signOutAPI } from './actions'
+import { signOutAPI } from '../../actions'
 
 
 
