@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import PostModal from '../../PostModal/PostModal'
+
 import user from '../../../Assets/Svg/user.svg'
 import photo from '../../../Assets/Svg/photo-icon.svg'
 import video from '../../../Assets/Svg/Video-icon.svg'
@@ -95,6 +97,7 @@ const Main = (props) => {
                 </SocialActions> 
         </Article>
     </div>
+    <PostModal />
 
   </Container>;
 };

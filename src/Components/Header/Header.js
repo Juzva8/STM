@@ -2,8 +2,6 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { signOutAPI } from '../../actions'
 
-
-
 import Loop from '../../Assets/Svg/search-icon.svg'
 import Lion from '../../Assets/Logo/home-logo.png'
 import house from '../../Assets/Svg/nav-home.svg'
@@ -82,7 +80,7 @@ const Header = (props) => {
                     </span>
                   </a>
     
-                  <SignOut>
+                  <SignOut onClick={() => props.signOut()}>
                     <a href="/">Sign Out</a>
                   </SignOut>
                 </User>
@@ -285,7 +283,9 @@ const Header = (props) => {
         };
       };
 
-      const mapDispatchToProps = (dispatch) => ({});
+      const mapDispatchToProps = (dispatch) => ({
+        signOut: () => dispatch(signOutAPI()),
+      });
 
 
 

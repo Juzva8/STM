@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { connect } from 'react-redux'
-import { SignInAPI } from '../../actions'
-import { Redirect } from 'react-router'
+import { connect } from 'react-redux';
+import { SignInAPI } from '../../actions';
+import { Redirect } from 'react-router';
+import './Login.css';
 // import lacrosse from '../../Assets/main.jpg'
-import Logo from '../../Assets/Logo/STM.png'
-import google from '../../Assets/Svg/google.svg'
-import hero from '../../Assets/Svg/login-hero.svg'
+import Logo from '../../Assets/Logo/STM.png';
+import google from '../../Assets/Svg/google.svg';
+import hero from '../../Assets/Svg/login-hero.svg';
 
 
 const Login = (props) => {
@@ -53,7 +54,10 @@ const Nav = styled.nav`
     img{
         padding-top: 10px;
         height 30px;
-        
+        @media (max-width: 768px) {
+          
+          height 20px;
+        }
     }
   & > a {
     width: 135px;
@@ -77,6 +81,7 @@ const Join = styled.a`
     text-decoration: none;
   }
 `;
+
 
 const SignIn = styled.a`
   box-shadow: inset 0 0 0 1px #0a66c2;
