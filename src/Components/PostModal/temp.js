@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useState } from 'react'
 import ReactPlayer from "react-player";
-import { connect } from 'react-redux';
 
 import closeIcon from "../../Assets/Svg/close-icon.svg"
 import user from "../../Assets/Svg/user.svg"
@@ -19,18 +18,18 @@ const PostModal = (props) => {
     const handleChange = (e) => {
         const image = e.target.files[0];
 
-        if (image === '' || image === undefined) {
-            alert(`not an image, the file is a ${typeof image}`);
+        if (image === '' || image === undefined){
+            alert(`not an image, the file is a ${typeof image}`)
             return ;
         }
             setShareImage(image);
-    };
+    }
 
     const switchAssetArea = (area) => {
         setShareImage('');
         setVideoLink('');
         setAssetArea(area); 
-    };
+    }
 
     const reset = (e) => {
 
@@ -39,10 +38,10 @@ const PostModal = (props) => {
         setVideoLink('');
         setAssetArea(''); 
         props.handleClick(e);
-    }; 
+    }
     return (
         <>
-        { props.showModal === 'open' && (
+        { props.showModal === 'open' && 
     <Container> 
         <Content>
             <Header> 
@@ -63,7 +62,7 @@ const PostModal = (props) => {
                     placeholder="Share It With Your Team !!!"
                     autoFocus={true}
                     />
-                    {assetArea === 'image' ? (
+                    { assetArea === 'images' ? (
                     <UploadImage>
                         <input 
                         type="file" 
@@ -76,8 +75,8 @@ const PostModal = (props) => {
                         <p>
                         <label htmlFor="file">Select an image file</label>
                         </p>
-                        {shareImage && ( 
-                        <img src={URL.createObjectURL(shareImage)} />
+                        { shareImage && ( 
+                        <img src={URL.createObjectURL(shareImage)}/>
                         )} 
                         </UploadImage>
                      ) : (
@@ -119,7 +118,7 @@ const PostModal = (props) => {
             </ShareCreation>
         </Content>
          </Container>
-        )}
+}
 </>
 
     )
