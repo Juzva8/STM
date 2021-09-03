@@ -10,6 +10,18 @@ import shareComment from "../../Assets/Svg/share-comment.svg"
 
 const PostModal = (props) => {
     const [editorText, setEditorText] = useState('');
+    const [shareImage, setShareImage] = useState('');
+
+    const handleChange = (e) => {
+        const image = e.target.files[0];
+
+        if (image === '' || image === undefined){
+            alert(`not an image, the file is a ${typeof image}`)
+            return ;
+        }
+            setShareImage(image);
+
+    }
 
     const reset = (e) => {
 
@@ -38,8 +50,18 @@ const PostModal = (props) => {
                     <textarea value={editorText}
                     onChange={(e) => setEditorText(e.target.value)} 
                     placeholder="Share It With Your Team !!!"
-                    autoFocus={true}>       
-                    </textarea>
+                    autoFocus={true}/>
+                    <UploadImage>
+                        <input 
+                        type="file" 
+                        accept="image/gif, image/jpeg, image/png"
+                        name= 'image'
+                        id='file'
+                        style={{display: 'none'}} 
+                        onChange={handleChange}
+                        />
+                        <p></p>
+                    </UploadImage>
                 </Editor>
             </SharedContent>
             <ShareCreation>
@@ -216,9 +238,9 @@ const Editor = styled.div`
             font-size: 16px;
             margin-bottom:20px;
         }
-
 `
 
+const UploadImage = styled.div``
 
     export default PostModal;
 
