@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { useState } from 'react'
 import ReactPlayer from "react-player";
 import { connect } from 'react-redux';
+import firebase from "firebase"
+import { postArticleAPI } from "../../actions";
 
 import closeIcon from "../../Assets/Svg/close-icon.svg"
 import user from "../../Assets/Svg/user.svg"
@@ -32,14 +34,32 @@ const PostModal = (props) => {
         setAssetArea(area); 
     };
 
-    const reset = (e) => {
+    const postArticle = (e) => {
+        e.preventDefault();
+        if (e.target !== e.currentTarget) {
+            return;
+        }
 
+        const payload = {
+            image: shareImage,
+            video: videoLink,
+            user: props.user,
+            description: editorText,
+            timestamp: firebase.firestore.Timestamp.now(),
+        };
+        props.postArticle(payload);
+        reset(e);
+    }
+
+    const reset = (e) => {
         setEditorText("");
         setShareImage('');
         setVideoLink('');
         setAssetArea(''); 
         props.handleClick(e);
     }; 
+
+
     return (
         <>
         { props.showModal === 'open' && (
@@ -117,8 +137,9 @@ const PostModal = (props) => {
                     Anyone
                     </AssetButton>
                 </ShareComment>
-                <PostButton disabled={!editorText ? true: false}>
-                    Post
+                <PostButton disabled={!editorText ? true: false} onClick={(event) => postArticle(event)}
+                >
+                Post
                 </PostButton>
             </ShareCreation>
         </Content>
@@ -292,7 +313,9 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = (dispatch) => ({
+    postArticle: (payload) => dispatch(postArticleAPI(payload)),
+});
 
 
 
