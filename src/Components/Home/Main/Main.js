@@ -44,8 +44,13 @@ const Main = (props) => {
 };
 
 
-  return ( <Container>
-      
+  return ( 
+  
+    <> 
+    { props.articles.length === 0 ? (
+    <p>There is nothing to show</p>
+    ) : (
+  <Container>  
     <ShareBox>
     <div>
         { props.user&& props.user.photoURL ? (
@@ -141,6 +146,8 @@ const Main = (props) => {
     <PostModal showModal={showModal} handleClick={handleClick} />
 
   </Container>
+     )}
+  </>
   );
 };
 
@@ -342,6 +349,7 @@ const SharedActor = styled.div`
                 return {
                     loading: state.articleState.loading,
                     user: state.userState.user,
+                    articles: state.articleState.articles,
                 };
             };
     
