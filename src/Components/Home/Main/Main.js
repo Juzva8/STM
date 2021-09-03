@@ -18,9 +18,8 @@ const Main = (props) => {
     const [showModal, setShowModal] = useState('close');
         
         const handleClick = (e) => {
-        // e.preventDefault();
+            e.preventDefault();
     if (e.target !== e.currentTarget) {
-        // e.preventDefault();
         return;
     }
     switch (showModal){
@@ -37,7 +36,7 @@ const Main = (props) => {
 };
 
 
-  return <Container>
+  return ( <Container>
       
     <ShareBox>Share
     <div>
@@ -122,7 +121,8 @@ const Main = (props) => {
     </div>
     <PostModal showModal={showModal} handleClick={handleClick} />
 
-  </Container>;
+  </Container>
+  );
 };
 
 const Container = styled.div`

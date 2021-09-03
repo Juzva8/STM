@@ -14,7 +14,7 @@ const PostModal = (props) => {
     const reset = (e) => {
 
         setEditorText("");
-        props.handleClick(editorText);
+        props.handleClick(e);
     }
 
 
