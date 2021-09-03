@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useState } from 'react'
+
 import closeIcon from "../../Assets/Svg/close-icon.svg"
 import user from "../../Assets/Svg/user.svg"
 import photo from "../../Assets/Svg/share-image.svg"
@@ -7,11 +9,23 @@ import shareComment from "../../Assets/Svg/share-comment.svg"
 
 
 const PostModal = (props) => {
-    return <Container> 
+    const [editorText, setEditorText] = useState('');
+
+    const reset = (e) => {
+
+        setEditorText("");
+        props.handleClick(editorText);
+    }
+
+
+    return (
+        <>
+        { props.showModal === 'open' && 
+    <Container> 
         <Content>
             <Header> 
                 <h2>Create a new post</h2>
-                <button>
+                <button onClick={(event) => reset(event)}>
                     <img src={closeIcon} alt="" />
                 </button>
             </Header>
@@ -20,6 +34,13 @@ const PostModal = (props) => {
                     <img src={user} alt="" />
                     <span>Name</span>
                 </UserInfo>
+                <Editor>
+                    <textarea value={editorText}
+                    onChange={(e) => setEditorText(e.target.value)} 
+                    placeholder="Share It With Your Team !!!"
+                    autoFocus={true}>       
+                    </textarea>
+                </Editor>
             </SharedContent>
             <ShareCreation>
                 <AttachAssets>
@@ -32,14 +53,21 @@ const PostModal = (props) => {
                 </AttachAssets>
                 <ShareComment>
                 <AssetButton>
-                    <img src={ShareComment} alt="" />
+                    <img src={shareComment} alt="" />
                     Anyone
                     </AssetButton>
                 </ShareComment>
+                <PostButton>
+                    Post
+                </PostButton>
             </ShareCreation>
         </Content>
          </Container>
-    };
+}
+</>
+
+    )
+};
  
 
     const Container = styled.div`
@@ -84,7 +112,8 @@ const Header = styled.div`
             color: rgba(0, 0, 0, 0.6);
             border: none;
             border-radius: 50px;
-                svg{
+                svg,
+                img{
             pointer-events: none;
         
         }
@@ -146,9 +175,49 @@ const AttachAssets = styled.div`
 
 
 const ShareComment = styled.div`
+        padding-left: 8px;
+        margin-right:auto; 
+        border-left: 1px solid rgba(0, 0, 0, 0.15);
+        ${AssetButton}
+        svg, 
+        img{
+                margin-right: 5px;
+               
+            }
+`;
 
+const PostButton = styled.button`
+    
+            min-height: 40px;
+            min-width: 80px;
+            border-radius: 20px;
+            padding-left: 16px;
+            padding-right: 16px;
+            background: rgba(255, 217, 0, 0.63); 
+            color: black;
+            &:hover {
+                background: black;
+                color: gold;
+            }
+`;
+
+
+const Editor = styled.div`
+        padding: 12px 24px;
+        textarea{
+            width: 100%;
+            min-height: 100px;
+            resize: none;
+        }
+        input{
+            width: 100%;
+            height:35px;
+            font-size: 16px;
+            margin-bottom:20px;
+        }
 
 `
+
 
     export default PostModal;
 

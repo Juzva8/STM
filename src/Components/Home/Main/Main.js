@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import PostModal from '../../PostModal/PostModal'
+import { useState } from 'react'
 
 import user from '../../../Assets/Svg/user.svg'
 import photo from '../../../Assets/Svg/photo-icon.svg'
@@ -14,12 +15,34 @@ import share from '../../../Assets/Svg/share.svg'
 import Kokse from '../../../Assets/Gallery/Goals.jpg'
 
 const Main = (props) => {
+    const [showModal, setShowModal] = useState('close');
+        
+        const handleClick = (e) => {
+        // e.preventDefault();
+    if (e.target !== e.currentTarget) {
+        // e.preventDefault();
+        return;
+    }
+    switch (showModal){
+        case "open":
+        setShowModal('close');
+        break;
+        case "close":
+            setShowModal('open');
+            break;
+            default: setShowModal('close');
+            break;
+    }
+
+};
+
+
   return <Container>
       
     <ShareBox>Share
     <div>
     <img src={user} alt=""/>
-    <button>Start a post</button>
+    <button onClick={handleClick}>Start a post</button>
     </div>
     <div>
     <button>
@@ -97,7 +120,7 @@ const Main = (props) => {
                 </SocialActions> 
         </Article>
     </div>
-    <PostModal />
+    <PostModal showModal={showModal} handleClick={handleClick} />
 
   </Container>;
 };
