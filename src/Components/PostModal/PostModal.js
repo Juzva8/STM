@@ -53,8 +53,12 @@ const PostModal = (props) => {
             </Header>
             <SharedContent>
                 <UserInfo>
+                    {props.user.photoURL ? (
+                    <img src={props.user.photoURL}/>
+                    ) : ( 
                     <img src={user} alt="" />
-                    <span>Name</span>
+                    )}
+                    <span>{props.user.displayName}</span>
                 </UserInfo>
                 <Editor>
                     <textarea 
@@ -279,9 +283,20 @@ const UploadImage = styled.div`
         img{
         width: 100%;
         }
-`
+`;
 
-    export default PostModal;
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.userState.user,
+    }
+};
+
+const mapDispatchToProps = (dispatch) => ({});
+
+
+
+    export default connect (mapStateToProps, mapDispatchToProps)(PostModal)
 
 
 
