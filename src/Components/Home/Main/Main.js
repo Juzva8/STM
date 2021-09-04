@@ -109,7 +109,7 @@ const Main = (props) => {
                 
                     ) : (
                 (
-                    article.sharedImg && <img src={article.sharedImg}/>
+                    article.sharedImg && <img src={article.sharedImg} />
                 )
                     )}
                 </a>
@@ -123,9 +123,7 @@ const Main = (props) => {
                     </button>
                 </li>
                 <li>
-                    <a>
-                        2 comments
-                    </a>
+                    <a>{article.comments}</a>
                 </li>
             </SocialCounts>
             <SocialActions> 
@@ -323,6 +321,8 @@ const SharedActor = styled.div`
                     }
                     button{
                         display: flex;
+                        border: none;
+                        background-color: white;
                     }
             `
 
@@ -337,6 +337,8 @@ const SharedActor = styled.div`
                     display: inline-flex;
                     align-items: center;
                     padding: 8px 10px;color: black;
+                    border:none;
+                    background-color: white;
 
                     @media(min-width: 768px) {
                        span{
