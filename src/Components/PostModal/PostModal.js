@@ -91,7 +91,7 @@ const PostModal = (props) => {
                     <UploadImage>
                         <input 
                         type="file" 
-                        accept="image/gif, image/jpeg, image/png"
+                        accept="image/gif, image/.jpg, image/png, image/jpeg"
                         name= 'image'
                         id='file'
                         style={{display: 'none'}} 

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PostModal from '../../PostModal/PostModal'
 import { connect } from 'react-redux'
 import { getArticlesAPI } from '../../../actions'
+import ReactPlayer from 'react-player'
 
 import user from '../../../Assets/Svg/user.svg'
 import photo from '../../../Assets/Svg/photo-icon.svg'
@@ -14,7 +15,6 @@ import comments from '../../../Assets/Svg/comments.svg'
 import like from '../../../Assets/Svg/like.svg'
 import send from '../../../Assets/Svg/Send.svg'
 import share from '../../../Assets/Svg/share.svg'
-import Kokse from '../../../Assets/Gallery/Goals.jpg'
 import spinLoader from '../../../Assets/Svg/spin-loader.svg'
 
 
@@ -83,30 +83,35 @@ const Main = (props) => {
     </div>
     </ShareBox>
     <Content>
-        { 
-        props.loading && <img src={spinLoader} />
-        }
-
-        <Article>
+        {props.loading && <img src={spinLoader} />}
+        {
+        props.articles.length > 0 && 
+        props.articles.map((article, key) => (
+        <Article key={key}>
             <SharedActor>
             <a>
-               <img src={user} alt=""/>
+               <img src={article.actor.image} alt=""/>
                <div>
-                   <span>Title</span>
-                   <span>Info</span>
-                   <span>Date</span>
+                   <span>{article.actor.title}</span>
+                   <span>{article.actor.description}</span>
+                   <span>{article.actor.date.toDate().toLocaleDateString()}</span>
                </div>
             </a>
             <button>
             <img src={Ellipsis} alt=""/>
             </button>
             </SharedActor>
-            <Description> 
-                Description
-            </Description>
+            <Description> {article.description} </Description>
             <SharedImg>
                 <a>
-                    <img src={Kokse} alt=""/>
+                {
+                    !article.sharedImg && article.video ? ( <ReactPlayer width={'100%'} url={article.video} />
+                
+                    ) : (
+                (
+                    article.sharedImg && <img src={article.sharedImg}/>
+                )
+                    )}
                 </a>
             </SharedImg>
             <SocialCounts>
@@ -142,6 +147,7 @@ const Main = (props) => {
                 </button>
                 </SocialActions> 
         </Article>
+        ))}
         </Content>
     <PostModal showModal={showModal} handleClick={handleClick} />
 
