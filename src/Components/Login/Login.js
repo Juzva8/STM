@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { SignInAPI } from '../../actions';
 import { Redirect } from 'react-router';
 import './Login.css';
-// import lacrosse from '../../Assets/main.jpg'
+import lacrosse from '../../Assets/main.jpg'
 import Logo from '../../Assets/Logo/STM.png';
 import google from '../../Assets/Svg/google.svg';
 import hero from '../../Assets/Svg/login-hero.svg';
@@ -27,7 +27,7 @@ const Login = (props) => {
       <Section>
         <Hero>
           <h1>Welcome To Your Athlete Recruiting Journey !</h1>
-          <img src={hero} alt="" />
+          <img src={lacrosse} alt="" />
         </Hero>
         <Form>
           <Google onClick = {() => props.signIn()}>
@@ -148,7 +148,7 @@ const Hero = styled.div`
     }
   }
   img {
-    /* z-index: -1; */
+    z-index: -1;
     width: 700px;
     height: 670px;
     position: absolute;
@@ -157,9 +157,12 @@ const Hero = styled.div`
     right: -150px;
     @media (max-width: 768px) {
       top: 230px;
+      padding:20px;
+      margin: 20px;
       width: initial;
       position: initial;
       height: initial;
+      max-height: 640px
     }
   }
 `;

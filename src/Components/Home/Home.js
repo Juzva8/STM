@@ -45,6 +45,7 @@ const Section = styled.section`
   text-align: center;
   text-decoration: none;
   // display: flex;
+  // flex-direction: row;
   justify-content: center;
   h5 {
     text-align: center;
