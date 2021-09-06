@@ -19,8 +19,6 @@ export default function ContactComponent() {
 
         <div className="contact">
             <div className="contact__background">
-                <div className="row">
-    <div className="col-12 col-lg-6 pl-lg-0 pr-lg-6">
     <form className="contact__form" onSubmit={sendEmail}>
     <h1 contact__form>Contact Us</h1>
             <label> Name </label>
@@ -36,16 +34,12 @@ export default function ContactComponent() {
         - SEND -
       </button>
             </form>
-            </div>  
-    <div className="col-12 col-lg-6 pl-lg-0 pr-lg-6">
-    <InlineWidget url="https://calendly.com/strattonterrace/30min" />
-        </div>
             </div>
             <h2 className="Contact__name">STRATTON TERRACE MARKETING</h2>
             <p className='contact__P'>Email: info@strattonterrace.com</p>
             <p className='contact__P'>Mobile: ‪(657) 877-9300</p>
              </div>
-             </div>
+        
     )
 }
 

@@ -2,16 +2,14 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { signOutAPI } from '../../actions'
 
-
 import Lion from '../../Assets/Logo/home-logo.png'
 import house from '../../Assets/Svg/nav-home.svg'
 import network from '../../Assets/Svg/nav-network.svg'
 import jobs from '../../Assets/Svg/nav-jobs.svg'
 import messaging from '../../Assets/Svg/nav-messaging.svg'
-import work from '../../Assets/Svg/nav-work.svg'
 import down from '../../Assets/Svg/down-icon.svg'
 import user from '../../Assets/Svg/user.svg'
-import notifications from '../../Assets/Svg/nav-notifications.svg'
+import contact from '../../Assets/Svg/contact.svg'
 
 
 const Header = (props) => {
@@ -55,9 +53,9 @@ const Header = (props) => {
                 </NavList>
     
                 <NavList>
-                  <a href="/home">
-                    <img src={notifications} alt="" />
-                    <span>Notifications</span>
+                  <a href="/contact">
+                    <img src={contact} alt="" />
+                    <span>Contact us</span>
                   </a>
                 </NavList>
     
