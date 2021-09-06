@@ -1,4 +1,6 @@
 .footer{
+  outline: none;
+  border: none;
   padding: 0.5rem;
   background-color: black;
   color: white;
@@ -19,21 +21,28 @@
 }
 .copyright:link{
   text-decoration: none; 
+  outline: none;
+  border: none;
   text-decoration: none !important;
 }
 .POWERED{
   justify-content: space-evenly;
   padding-left: 25%;  
   text-decoration: none !important;
+  outline: none;
+  border: none;
 }
 .POWERED:hover{
   color: gold;
   text-decoration: none !important;
+  outline: none;
+  border: none;
 }
 a{
 color:white;
-
-
+outline: none;
+border: none;
+-webkit-text-decoration: none;
 }
 .icon-bar > a:hover{
 color: gold;
@@ -42,6 +51,8 @@ color: gold;
 
 .footer{
   display: none;
+  outline: none;
+  border: none;
   /* padding: 0.5rem;
   background-color: black;
   color: white;
@@ -51,6 +62,8 @@ color: gold;
 }
 .copyright{
   display: none;
+  outline: none;
+  border: none;
   /* justify-content: space-evenly;
   font-size: xx-small;
   display: flex;
@@ -58,6 +71,8 @@ color: gold;
   padding-right: 2px; */
 }
 .POWERED{
+  outline: none;
+  border: none;
   display: none;
   /* justify-content: space-evenly;
   display: flex;
@@ -70,6 +85,8 @@ color: gold;
 @media (max-width: 600px) and (min-width: 540px){
   .footer{
     display: none;
+    outline: none;
+    border: none;
     /* padding: 0.5rem;
     background-color: black;
     color: white;
@@ -79,10 +96,14 @@ color: gold;
   }
   .POWERED{
     display: none;
+    outline: none;
+    border: none;
     /* visibility: hidden; */
   }
   .copyright{
     display: none;
+    outline: none;
+    border: none;
     /* justify-content: space-evenly;
     font-size: xx-small;
     display: flex;

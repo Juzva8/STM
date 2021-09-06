@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { signOutAPI } from '../../actions'
 
-import Loop from '../../Assets/Svg/search-icon.svg'
+
 import Lion from '../../Assets/Logo/home-logo.png'
 import house from '../../Assets/Svg/nav-home.svg'
 import network from '../../Assets/Svg/nav-network.svg'
@@ -24,14 +24,6 @@ const Header = (props) => {
                 <img src={Lion} alt=""/>
               </a>
             </Logo>
-            <Search>
-              <div>
-                <input type="text" placeholder="Search" />
-              </div>
-              <SearchIcon>
-                <img src={Loop} alt="" />
-              </SearchIcon>
-            </Search>
             <Nav>
               <NavListWrap>
                 <NavList className="active">
@@ -84,16 +76,6 @@ const Header = (props) => {
                     <a href="/">Sign Out</a>
                   </SignOut>
                 </User>
-    
-                <Work>
-                  <a href="/home">
-                    <img src={work} alt="" />
-                    <span>
-                      Work
-                      <img src={down} alt="" />
-                    </span>
-                  </a>
-                </Work>
               </NavListWrap>
             </Nav>
           </Content>
@@ -123,30 +105,6 @@ const Header = (props) => {
     const Logo = styled.span`
       margin-right: 8px;
       font-size: 0px;
-    `;
-    
-    const Search = styled.div`
-      opacity: 1;
-      flex-grow: 1;
-      position: relative;
-      & > div {
-        max-width: 280px;
-        input {
-          border: none;
-          box-shadow: none;
-          background-color: #eef3f8;
-          border-radius: 2px;
-          color: rgba(0, 0, 0, 0.9);
-          width: 218px;
-          padding: 0 8px 0 40px;
-          line-height: 1.75;
-          font-weight: 400;
-          font-size: 14px;
-          height: 34px;
-          border-color: #dce6f1;
-          vertical-align: text-top;
-        }
-      }
     `;
     
     const SearchIcon = styled.div`
@@ -251,6 +209,7 @@ const Header = (props) => {
     `;
     
     const User = styled(NavList)`
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
       a > svg {
         width: 24px;
         border-radius: 50%;
@@ -273,10 +232,7 @@ const Header = (props) => {
       }
     `;
     
-    const Work = styled(User)`
-      border-left: 1px solid rgba(0, 0, 0, 0.08);
-    `;
-
+  
     const mapStateToProps = (state) => {
         return {
           user: state.userState.user,

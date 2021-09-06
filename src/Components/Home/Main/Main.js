@@ -12,8 +12,6 @@ import event from '../../../Assets/Svg/Event-icon.svg'
 import articles from '../../../Assets/Svg/articles-icon.svg'
 import Ellipsis from '../../../Assets/Svg/ellipsis.svg'
 import comments from '../../../Assets/Svg/comments.svg'
-import like from '../../../Assets/Svg/like.svg'
-import send from '../../../Assets/Svg/Send.svg'
 import share from '../../../Assets/Svg/share.svg'
 import spinLoader from '../../../Assets/Svg/spin-loader.svg'
 
@@ -42,6 +40,7 @@ const Main = (props) => {
     }
 
 };
+
 
 
   return ( 
@@ -118,19 +117,19 @@ const Main = (props) => {
                 <li>
                     <button>
                          <img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt=""/>
-                         <img src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt=""/>
                          <span>75</span>
                     </button>
                 </li>
                 <li>
+                    
                     <a>{article.comments}</a>
                 </li>
             </SocialCounts>
             <SocialActions> 
-                <button> 
+                {/* <button> 
                 <img src={like} alt=""/>
                 <span>Like</span>
-                </button>
+                </button> */}
                 <button> 
                 <img src={comments} alt=""/>
                 <span>Comment</span>
@@ -138,10 +137,6 @@ const Main = (props) => {
                 <button> 
                 <img src={share} alt=""/>
                 <span>Share</span>
-                </button>
-                <button> 
-                <img src={send} alt=""/>
-                <span>Send</span>
                 </button>
                 </SocialActions> 
         </Article>

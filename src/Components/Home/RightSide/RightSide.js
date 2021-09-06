@@ -1,48 +1,72 @@
 import styled from "styled-components";
-import feed from '../../../Assets/Svg/feed-icon.svg'
 import right from '../../../Assets/Svg/right-icon.svg'
 import student from '../../../Assets/Gallery/Student.jpg'
+import instagram from '../../../Assets/Icons/instagram.png'
+import Youtube from '../../../Assets/Icons/Youtube.png'
 
 const Rightside = (props) => {
   return (
     <Container>
       <FollowCard>
         <Title>
-          <h2>Add to your feed</h2>
-          <img src={feed} alt="" />
+          <h2>Follow us on social media</h2>
         </Title>
 
         <FeedList>
           <li>
             <a>
-              <Avatar />
+              <Avatar> 
+              <a href="https://www.instagram.com/strattonterrace/" target="_blank"> 
+              <img src={instagram} alt="instagram" /> 
+              </a>
+                </Avatar>
             </a>
             <div>
-              <span>#STM</span>
+              <span>Instagram</span>
+              <a href="https://www.instagram.com/accounts/login/?next=%2Fstrattonterrace%2F&source=follow" target="_blank"> 
               <button>Follow</button>
+              </a>
             </div>
           </li>
           <li>
             <a>
-              <Avatar />
+              <Avatar>
+              <a href="https://www.youtube.com/channel/UCSVPRu3IXVhf18EAhrPcSlg" target="_blank"> 
+              <img src={Youtube} alt="youtube" />
+              </a>
+                </Avatar>
             </a>
             <div>
-              <span>#Video</span>
-              <button>Follow</button>
+              <span>Youtube</span>
+              <a href="https://www.youtube.com/channel/UCSVPRu3IXVhf18EAhrPcSlg" target="_blank"> 
+              <button>Subscribe</button>
+              </a>
             </div>
           </li>
         </FeedList>
 
-        <Recommendation>
-          View all recommendations
-          <img src={right} alt="" />
+        <Recommendation href="https://goo.gl/maps/p9cZTnXv71pYBR9o8">
+          View More About Stratton Terrace Marketing
+          <img src={right}  alt="" />
         </Recommendation>
       </FollowCard>
       <BannerCard>
-        <img
+        {/* <img
           src={student}
           alt=""
-        />
+        /> */}
+
+<iframe 
+            title="STM" 
+            src="https://www.ncaa.com/scoreboard/lacrosse-men/d1"
+            width="440" 
+            height="100%" 
+            style={{border: "none", overflow: "hidden" }}
+            scrolling="yes" 
+            frameborder="0" 
+            allowTransparency="true"  
+            allow= "encrypted-media">
+            </iframe>
       </BannerCard>
     </Container>
   );
@@ -65,12 +89,11 @@ const FollowCard = styled.div`
 `;
 
 const Title = styled.div`
-  display: inline-flex;
-  align-items: center;
   justify-content: space-between;
   font-size: 16px;
   width: 100%;
-  color: rgba(0, 0, 0, 0.6);
+  color: gold;
+  text-align: center;
 `;
 
 const FeedList = styled.ul`
@@ -78,7 +101,8 @@ const FeedList = styled.ul`
   li {
     display: flex;
     align-items: center;
-    margin: 12px 0;
+    justify-content: space-between;
+    margin: 12px 24px;
     position: relative;
     font-size: 14px;
     & > div {
@@ -88,30 +112,45 @@ const FeedList = styled.ul`
     button {
       background-color: transparent;
       color: rgba(0, 0, 0, 0.6);
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+      box-shadow: inset 0 0 0 1px rgb(232 215 10 / 60%);
       padding: 16px;
+      margin-top: 5px;
       align-items: center;
       border-radius: 15px;
       box-sizing: border-box;
       font-weight: 600;
-      display: inline-flex;
+      display: inline-flex; 
       justify-content: center;
       max-height: 32px;
+      width: 100px;
       max-width: 480px;
       text-align: center;
-      outline: none;
+        a{
+outline: none;
+        }
+
+       &:hover{
+        background-color: black;
+        color: gold;
+       }
     }
   }
 `;
 
 const Avatar = styled.div`
-  background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 48px;
   height: 48px;
-  margin-right: 8px;
+  margin-right: 32px;
+  img {
+    width: 100%;
+    height: 100%;
+    padding-top: 8px;
+
+  }
+  
 `;
 
 const Recommendation = styled.a`
@@ -122,10 +161,14 @@ const Recommendation = styled.a`
 `;
 
 const BannerCard = styled(FollowCard)`
+height: 80%;
+
   img {
     width: 100%;
     height: 100%;
   }
 `;
+
+
 
 export default Rightside;

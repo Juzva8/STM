@@ -4,12 +4,13 @@
   background-Size: cover;
   background-Repeat: no-repeat;
   padding-bottom: 20px;
-  margin-top: -2%;
+  /* margin-top: -2%; */
 }
 
 .contact__form {
   display: flex;
   background-color: #fafafa !important;
+  padding: 20px;
   opacity: 0.8;
   flex-direction: column;
   justify-content: center;

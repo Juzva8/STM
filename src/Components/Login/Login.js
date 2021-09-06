@@ -18,13 +18,15 @@ const Login = (props) => {
           <img src={Logo} alt="" />
         </a>
         <div>
-          <Join>Join now</Join>
-          <SignIn>Sign in</SignIn>
+        <Join onClick = {() => props.signIn()}>Login</Join>
+          <a href="/contact">
+          <ContactUs>Contact Us</ContactUs>
+          </a>
         </div>
       </Nav>
       <Section>
         <Hero>
-          <h1>Welcome to your professional community</h1>
+          <h1>Welcome To Your Athlete Recruiting Journey !</h1>
           <img src={hero} alt="" />
         </Hero>
         <Form>
@@ -55,7 +57,6 @@ const Nav = styled.nav`
         padding-top: 10px;
         height 30px;
         @media (max-width: 768px) {
-          
           height 20px;
         }
     }
@@ -72,20 +73,26 @@ const Join = styled.a`
   font-size: 16px;
   padding: 10px 12px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 24px;
   color: rgba(0, 0, 0, 0.6);
   margin-right: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+
   &:hover {
-    background-color: rgba(0, 0, 0, 0.08);
-    color: rgba(0, 0, 0, 0.9);
+    background-color: gold;
+    color: white;
+    cursor: pointer;
     text-decoration: none;
   }
 `;
 
 
-const SignIn = styled.a`
-  box-shadow: inset 0 0 0 1px #0a66c2;
-  color: #0a66c2;
+const ContactUs = styled.a`
+  box-shadow: inset 0 0 0 1px gold;
+  color: rgba(0, 0, 0, 0.6);
   border-radius: 24px;
   transition-duration: 167ms;
   font-size: 16px;
@@ -94,10 +101,15 @@ const SignIn = styled.a`
   padding: 10px 24px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
+  text-decoration: none!important;
+  outline: none;
+  border: none;
   &:hover {
-    background-color: rgba(112, 181, 249, 0.15);
-    color: #0a66c2;
-    text-decoration: none;
+    background-color: black;
+    color: gold;
+    text-decoration: none!important;
+  outline: none;
+  border: none;
   }
 `;
 
@@ -125,7 +137,7 @@ const Hero = styled.div`
   h1 {
     width: 55%;
     font-size: 56px;
-    color: #2977c9;
+    color: Black;
     font-weight: 200;
     line-height: 70px;
     @media (max-width: 768px) {
@@ -191,7 +203,6 @@ const mapStateToProps = (state) => {
       user: state.userState.user,
     };
 };
-
 
 
 const mapDispatchToProps = (dispatch) => ({ 

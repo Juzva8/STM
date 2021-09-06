@@ -1,49 +1,115 @@
-import React from 'react'
-import './Contact.css'
-import { InlineWidget } from "react-calendly";
-import emailjs from "emailjs-com";
+import styled from "styled-components";
+import ContactComponent from "../../Components/ContactComponent/ContactComponent";
+import Logo from '../../Assets/Logo/STM.png';
+import { connect } from 'react-redux';
+import { SignInAPI } from '../../actions';
 
-export default function Contact() {
-
-    function sendEmail(e) {
-      e.preventDefault();
-      emailjs.sendForm('stratton', 'template_64jva5n', e.target, 'user_RUuKdJ2GeHqbg1RhTvRbp')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-        e.target.reset();
-    }
+function Contact(props) {
     return (
-        <div className="contact">
-            <div className="contact__background">
-                <div className="row">
-    <div className="col-12 col-lg-6 pl-lg-0 pr-lg-6">
-    <form className="contact__form" onSubmit={sendEmail}>
-    <h1 contact__form>Contact Us</h1>
-            <label> Name </label>
-            <input type="text" className="form-control" placeholder="Name" name="name"/>
-            <label> Email </label>
-            <input type="email" className="form-control" placeholder="Email Address" name="email"/>
-              <label> Subject </label>
-              <input type="text" className="form-control" placeholder="Subject" name="subject"/>
-            <label>Message</label>
-            <textarea className="form-control" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
-            <button
-        type="submit" >
-        - SEND -
-      </button>
-            </form>
-            </div>  
-    <div className="col-12 col-lg-6 pl-lg-0 pr-lg-6">
-    <InlineWidget url="https://calendly.com/strattonterrace/30min" />
-        </div>
-            </div>
-            <h2 className="Contact__name">STRATTON TERRACE MARKETING</h2>
-            <p className='contact__P'>Email: info@strattonterrace.com</p>
-            <p className='contact__P'>Mobile: ‪(657) 877-9300</p>
-             </div>
-             </div>
+
+        <Container>
+        <Nav>
+          <a href="/">
+            <img src={Logo} alt="" />
+          </a>
+          <div>
+            <Join onClick = {() => props.signIn()}>Login</Join>
+            <a href="/contact">
+            <ContactUs>Contact Us</ContactUs>
+            </a>
+          </div>
+        </Nav>
+       <ContactComponent />
+
+</Container>
+
     )
 }
+
+
+const Container = styled.div`
+  padding: 0px;
+`;
+const Nav = styled.nav`
+  max-width: 1128px;
+  margin: auto;
+  padding: 12px 0 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+    img{
+        padding-top: 10px;
+        height 30px;
+        @media (max-width: 768px) {
+          
+          height 20px;
+        }
+    }
+  & > a {
+    width: 135px;
+    height: 34px;
+    @media (max-width: 768px) {
+      padding: 0 5px;
+    }
+  }
+`;
+
+const ContactUs = styled.a`
+  box-shadow: inset 0 0 0 1px gold;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 24px;
+  transition-duration: 167ms;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 40px;
+  padding: 10px 24px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: none!important;
+  outline: none;
+  border: none;
+  &:hover {
+    background-color: black;
+    color: gold;
+    text-decoration: none!important;
+  outline: none;
+  border: none;
+  }
+`;
+
+const Join = styled.a`
+  font-size: 16px;
+  padding: 10px 12px;
+  text-decoration: none;
+  border-radius: 24px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-right: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: gold;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+`;
+
+const mapStateToProps = (state) => {
+    return {
+      user: state.userState.user,
+    };
+};
+
+
+const mapDispatchToProps = (dispatch) => ({ 
+  signIn: () => dispatch(SignInAPI()),
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);
+

@@ -1,10 +1,16 @@
 .App {
   text-align: center;
+  text-decoration: none!important;
+  outline: none;
+  border: none;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,10 +28,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  outline: none;
+  border: none;
 }
 
 @keyframes App-logo-spin {
