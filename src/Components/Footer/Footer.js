@@ -21,9 +21,9 @@ const Footer = () => (
                     <i className="fab fa-twitter"></i>
                     </a>
                 </ul>
-   <span href="https://strattonterrace.com/" target="_blank" className="copyright"rel="noopener noreferrer">COPYRIGHT © 2021 Stratton Terrace Marketing, LLC - ALL RIGHTS RESERVED.</span>
+   <a href="https://strattonterrace.com/" target="_blank" className="copyright"rel="noopener noreferrer">COPYRIGHT © 2021 Stratton Terrace Marketing, LLC - ALL RIGHTS RESERVED.</a>
    {}
-   <span href="https://strattonterrace.com/" target="_blank" className="POWERED" rel="noopener noreferrer">POWERED BY STRATTON TERRACE MARKETING </span>
+   <a href="https://strattonterrace.com/" target="_blank" className="POWERED" rel="noopener noreferrer">POWERED BY STRATTON TERRACE MARKETING </a>
   
     </div>
   );

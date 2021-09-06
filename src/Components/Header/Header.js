@@ -30,21 +30,19 @@ const Header = (props) => {
                     <span>Home</span>
                   </a>
                 </NavList>
-    
+
                 <NavList>
                   <a href="/home">
                     <img src={network} alt="" />
                     <span>My Network</span>
                   </a>
                 </NavList>
-    
                 <NavList>
                   <a href="/home">
                     <img src={jobs} alt="" />
                     <span>Jobs</span>
                   </a>
                 </NavList>
-    
                 <NavList>
                   <a href="/home">
                     <img src={messaging} alt="" />
@@ -53,12 +51,11 @@ const Header = (props) => {
                 </NavList>
     
                 <NavList>
-                  <a href="/contact">
+                  <a href="/contact" target="_blank">
                     <img src={contact} alt="" />
                     <span>Contact us</span>
                   </a>
                 </NavList>
-    
                 <User>
                   <a>
                     {props.user && props.user.photoURL ? ( <img src={props.user.photoURL} alt="" /> 

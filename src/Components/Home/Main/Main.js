@@ -42,7 +42,6 @@ const Main = (props) => {
 };
 
 
-
   return ( 
   
     <> 
@@ -63,18 +62,26 @@ const Main = (props) => {
             Start a post</button>
     </div>
     <div>
-    <button>
-    <img src={photo} alt=""/>
-    <span>Photo</span>
+    <button onClick={handleClick}
+        disabled = {props.loading ? true: false}> 
+    <img onClick={handleClick}
+        disabled = {props.loading ? true: false} src={photo} alt=""/>
+    <span onClick={handleClick}
+        disabled = {props.loading ? true: false}>Photo</span>
     </button>
-    <button>
-    <img src={video} alt=""/>
-    <span>Video</span>
+    <button onClick={handleClick}
+        disabled = {props.loading ? true: false}>
+    <img onClick={handleClick}
+        disabled = {props.loading ? true: false} src={video} alt=""/>
+    <span onClick={handleClick}
+        disabled = {props.loading ? true: false}>Video</span>
     </button>
+    <a href="https://calendly.com/strattonterrace/30min" >
     <button>
     <img src={event} alt=""/>
-    <span>Event</span>
+    <span>Book consultation</span>
     </button>
+    </a>
     <button>
     <img src={articles} alt=""/>
     <span>Articles</span>
@@ -113,7 +120,7 @@ const Main = (props) => {
                     )}
                 </a>
             </SharedImg>
-            <SocialCounts>
+            {/* <SocialCounts>
                 <li>
                     <button>
                          <img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt=""/>
@@ -124,7 +131,7 @@ const Main = (props) => {
                     
                     <a>{article.comments}</a>
                 </li>
-            </SocialCounts>
+            </SocialCounts> */}
             <SocialActions> 
                 {/* <button> 
                 <img src={like} alt=""/>
@@ -182,6 +189,7 @@ const ShareBox = styled(CommonCard)`
         border: none;
         display: flex;
         align-items: center;
+        cursor: pointer;
         font-weight: 600;
         }
             &:first-child {

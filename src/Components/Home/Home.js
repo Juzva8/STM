@@ -12,7 +12,7 @@ const Home = (props) => {
       {!props.user && <Redirect to='/'/>}
       <Section>
         <h5>
-          <a >Already committed? - </a>
+          <span >Already committed? - </span>
         </h5>
         <p>
           Share your Photo or Video with us. And help others with to do the right thing.
@@ -40,16 +40,17 @@ const Content = styled.div`
 
 const Section = styled.section`
   min-height: 50px;
-  padding: 16px 0;
+  margin-top: 150px;
   box-sizing: content-box;
   text-align: center;
   text-decoration: none;
-  display: flex;
+  // display: flex;
   justify-content: center;
   h5 {
+    text-align: center;
     color: gold;
     font-size: 14px;
-    a {
+    span {
       font-weight: 700;
     }
   }
