@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import { SignInAPI } from '../../actions';
 import { Redirect } from 'react-router';
 import './Login.css';
-import lacrosse from '../../Assets/main.jpg'
 import Logo from '../../Assets/Logo/STM.png';
 import google from '../../Assets/Svg/google.svg';
-import hero from '../../Assets/Svg/login-hero.svg';
+import hero from '../../Assets/Svg/Main.svg';
 
 
 const Login = (props) => {
@@ -27,7 +26,10 @@ const Login = (props) => {
       <Section>
         <Hero>
           <h1>Welcome To Your Athlete Recruiting Journey !</h1>
-          <img src={lacrosse} alt="" />
+          <img src={hero} alt="" />
+          <h5>Each and every STM recruiter is an athlete, went through the recruiting process, and we know the academic process as well. 
+                We came to learn that there are a ton of colleges you can play for, and there is an equal amount of them giving out scholarships. 
+                We want to be that initial guide map in achieving the most important goal of all,  your degree!</h5>
         </Hero>
         <Form>
           <Google onClick = {() => props.signIn()}>
@@ -80,7 +82,6 @@ const Join = styled.a`
   text-decoration: none;
   outline: none;
   border: none;
-
   &:hover {
     background-color: gold;
     color: white;
@@ -102,14 +103,9 @@ const ContactUs = styled.a`
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
   text-decoration: none!important;
-  outline: none;
-  border: none;
   &:hover {
     background-color: black;
     color: gold;
-    text-decoration: none!important;
-  outline: none;
-  border: none;
   }
 `;
 
@@ -147,22 +143,36 @@ const Hero = styled.div`
       line-height: 2;
     }
   }
+  h5 {
+    width: 50%;
+    font-size: 16px;
+    color: Black;
+    font-weight: 300;
+    line-height: 25px;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 16px;
+      width: 90%;
+      line-height: 1;
+    }
+  }
   img {
     z-index: -1;
-    width: 700px;
-    height: 670px;
+    height: 640px;
     position: absolute;
-    border-radius: 30px;
+    padding:24px;
+    border-radius: 900px;
     bottom: 40px;
     right: -150px;
     @media (max-width: 768px) {
       top: 230px;
-      padding:20px;
-      margin: 20px;
+      right: 0px;
       width: initial;
       position: initial;
       height: initial;
-      max-height: 640px
+      max-height: 540px
+
+      
     }
   }
 `;
@@ -172,6 +182,7 @@ const Form = styled.div`
   width: 408px;
   @media (max-width: 768px) {
     margin-top: 20px;
+    
   }
 `;
 
@@ -192,6 +203,7 @@ const Google = styled.button`
   color: rgba(0, 0, 0, 0.6);
   img{
     padding-right: 15px
+    align-items: center;
 }
   &:hover {
     background-color: rgba(207, 207, 207, 0.25);
@@ -199,6 +211,7 @@ const Google = styled.button`
       
   }
 `;
+
 
 
 const mapStateToProps = (state) => {

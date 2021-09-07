@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import right from '../../../Assets/Svg/right-icon.svg'
-import student from '../../../Assets/Gallery/Student.jpg'
 import instagram from '../../../Assets/Icons/instagram.png'
 import Youtube from '../../../Assets/Icons/Youtube.png'
 
@@ -16,14 +15,14 @@ const Rightside = (props) => {
           <li>
             <a>
               <Avatar> 
-              <a href="https://www.instagram.com/strattonterrace/" target="_blank"> 
-              <img src={instagram} alt="instagram" /> 
+              <a href="https://www.instagram.com/strattonterrace/" target="_blank" rel="noreferrer"  > 
+              <img src={instagram} alt="instagram" alt="" /> 
               </a>
                 </Avatar>
             </a>
             <div>
               <span>Instagram</span>
-              <a href="https://www.instagram.com/accounts/login/?next=%2Fstrattonterrace%2F&source=follow" target="_blank"> 
+              <a href="https://www.instagram.com/accounts/login/?next=%2Fstrattonterrace%2F&source=follow" target="_blank" rel="noreferrer"  > 
               <button>Follow</button>
               </a>
             </div>
@@ -31,14 +30,14 @@ const Rightside = (props) => {
           <li>
             <a>
               <Avatar>
-              <a href="https://www.youtube.com/channel/UCSVPRu3IXVhf18EAhrPcSlg" target="_blank"> 
-              <img src={Youtube} alt="youtube" />
+              <a href="https://www.youtube.com/channel/UCSVPRu3IXVhf18EAhrPcSlg" target="_blank" rel="noreferrer"  > 
+              <img src={Youtube} alt="youtube" alt="" />
               </a>
                 </Avatar>
             </a>
             <div>
               <span>Youtube</span>
-              <a href="https://www.youtube.com/channel/UCSVPRu3IXVhf18EAhrPcSlg" target="_blank"> 
+              <a href="https://www.youtube.com/channel/UCSVPRu3IXVhf18EAhrPcSlg" target="_blank" rel="noreferrer"  > 
               <button>Subscribe</button>
               </a>
             </div>
@@ -47,7 +46,7 @@ const Rightside = (props) => {
 
         <Recommendation href="https://goo.gl/maps/p9cZTnXv71pYBR9o8">
           View More About Stratton Terrace Marketing
-          <img src={right}  alt="" />
+          <img src={right}  alt=""/>
         </Recommendation>
       </FollowCard>
       <BannerCard>

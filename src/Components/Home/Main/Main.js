@@ -52,7 +52,7 @@ const Main = (props) => {
     <ShareBox>
     <div>
         { props.user&& props.user.photoURL ? (
-         <img src={props.user.photoURL}/>
+         <img src={props.user.photoURL} alt=""/>
          ) : ( 
          <img src={user} alt=""/>
  
@@ -115,7 +115,7 @@ const Main = (props) => {
                 
                     ) : (
                 (
-                    article.sharedImg && <img src={article.sharedImg} />
+                    article.sharedImg && <img src={article.sharedImg} alt=""/>
                 )
                     )}
                 </a>
@@ -305,29 +305,31 @@ const SharedActor = styled.div`
                         object-fit: contain;
                         width: 100%;
                         height: 100%;
+                        max-height:600px;
+                        min-height:100px;
                     }
             `;
 
             
-            const SocialCounts = styled.ul`  
-            line-height: 1.3;
-            display: flex;
-            align-items: flex-start;
-            overflow: auto;
-            margin: 0 16px;
-            padding: 8px 0;
-            border-bottom: 1px solid #e9e5df;
-            list-style: none;
-                    li {
-                        margin-right: 5px;
-                        font-size: 12px;
-                    }
-                    button{
-                        display: flex;
-                        border: none;
-                        background-color: white;
-                    }
-            `
+            // const SocialCounts = styled.ul`  
+            // line-height: 1.3;
+            // display: flex;
+            // align-items: flex-start;
+            // overflow: auto;
+            // margin: 0 16px;
+            // padding: 8px 0;
+            // border-bottom: 1px solid #e9e5df;
+            // list-style: none;
+            //         li {
+            //             margin-right: 5px;
+            //             font-size: 12px;
+            //         }
+            //         button{
+            //             display: flex;
+            //             border: none;
+            //             background-color: white;
+            //         }
+            // `
 
             const SocialActions = styled.div`
             align-items: center;

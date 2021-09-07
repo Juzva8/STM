@@ -37,12 +37,7 @@ const Header = (props) => {
                     <span>My Network</span>
                   </a>
                 </NavList>
-                <NavList>
-                  <a href="/home">
-                    <img src={jobs} alt="" />
-                    <span>Jobs</span>
-                  </a>
-                </NavList>
+              
                 <NavList>
                   <a href="/home">
                     <img src={messaging} alt="" />
@@ -102,19 +97,19 @@ const Header = (props) => {
       font-size: 0px;
     `;
     
-    const SearchIcon = styled.div`
-      width: 40px;
-      position: absolute;
-      z-index: 1;
-      top: 10px;
-      left: 2px;
-      border-radius: 0 2px 2px 0;
-      margin: 0;
-      pointer-events: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    `;
+    // const SearchIcon = styled.div`
+    //   width: 40px;
+    //   position: absolute;
+    //   z-index: 1;
+    //   top: 10px;
+    //   left: 2px;
+    //   border-radius: 0 2px 2px 0;
+    //   margin: 0;
+    //   pointer-events: none;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    // `;
     
     const Nav = styled.nav`
       margin-left: auto;

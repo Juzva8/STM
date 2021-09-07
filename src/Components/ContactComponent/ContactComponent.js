@@ -1,6 +1,5 @@
 import React from 'react'
 import './ContactComponent.css'
-import { InlineWidget } from "react-calendly";
 import emailjs from "emailjs-com";
 
 export default function ContactComponent() {

@@ -74,7 +74,7 @@ const PostModal = (props) => {
             <SharedContent>
                 <UserInfo>
                     {props.user.photoURL ? (
-                    <img src={props.user.photoURL}/>
+                    <img src={props.user.photoURL} alt=""/>
                     ) : ( 
                     <img src={user} alt="" />
                     )}
@@ -98,10 +98,10 @@ const PostModal = (props) => {
                         onChange={handleChange}
                         />
                         <p>
-                        <label htmlFor="file">Select an image file</label>
+                        <label style={{cursor: 'pointer'}}  htmlFor="file">Select an image file</label>
                         </p>
                         {shareImage && ( 
-                        <img src={URL.createObjectURL(shareImage)} />
+                        <img src={URL.createObjectURL(shareImage)} alt=""/>
                         )} 
                         </UploadImage>
                      ) : (
@@ -248,6 +248,7 @@ const AssetButton = styled.div`
 
 const AttachAssets = styled.div`
         align-items: center;
+        cursor: pointer;
         display: flex;
         padding-right: 8px;
         ${AssetButton}{
@@ -287,7 +288,7 @@ const PostButton = styled.button`
 const Editor = styled.div`
         padding: 12px 24px;
         textarea{
-            width: 100%;
+            width: 90%;
             min-height: 100px;
             resize: none;
         }
