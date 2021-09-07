@@ -5,8 +5,8 @@ import { signOutAPI } from '../../actions'
 import Lion from '../../Assets/Logo/home-logo.png'
 import house from '../../Assets/Svg/nav-home.svg'
 import network from '../../Assets/Svg/nav-network.svg'
-import jobs from '../../Assets/Svg/nav-jobs.svg'
-import messaging from '../../Assets/Svg/nav-messaging.svg'
+// import jobs from '../../Assets/Svg/nav-jobs.svg'
+import presentation from '../../Assets/Svg/presentation.svg'
 import down from '../../Assets/Svg/down-icon.svg'
 import user from '../../Assets/Svg/user.svg'
 import contact from '../../Assets/Svg/contact.svg'
@@ -32,16 +32,16 @@ const Header = (props) => {
                 </NavList>
 
                 <NavList>
-                  <a href="/home">
+                  <a href="https://strattonterraceinf.wixsite.com/athletestmllc" target="_blank">
                     <img src={network} alt="" />
-                    <span>My Network</span>
+                    <span>STM</span>
                   </a>
                 </NavList>
               
                 <NavList>
-                  <a href="/home">
-                    <img src={messaging} alt="" />
-                    <span>Messaging</span>
+                  <a href="https://drive.google.com/file/d/1C1Tz_RVY4o2SDMIsfkd8mgaBOPPWctC4/view?usp=sharing" target="_blank">
+                    <img src={presentation} alt="" />
+                    <span>Goals</span>
                   </a>
                 </NavList>
     

@@ -10,7 +10,7 @@ import photo from '../../../Assets/Svg/photo-icon.svg'
 import video from '../../../Assets/Svg/Video-icon.svg'
 import event from '../../../Assets/Svg/Event-icon.svg'
 import articles from '../../../Assets/Svg/articles-icon.svg'
-import Ellipsis from '../../../Assets/Svg/ellipsis.svg'
+// import Ellipsis from '../../../Assets/Svg/ellipsis.svg'
 import comments from '../../../Assets/Svg/comments.svg'
 import share from '../../../Assets/Svg/share.svg'
 import spinLoader from '../../../Assets/Svg/spin-loader.svg'
@@ -103,9 +103,9 @@ const Main = (props) => {
                    <span>{article.actor.date.toDate().toLocaleDateString()}</span>
                </div>
             </a>
-            <button>
+            {/* <button>
             <img src={Ellipsis} alt=""/>
-            </button>
+            </button> */}
             </SharedActor>
             <Description> {article.description} </Description>
             <SharedImg>

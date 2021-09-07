@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 import widget from '../../../Assets/Svg/widget-icon.svg'
 import item from '../../../Assets/Svg/item-icon.svg'
 import plus from '../../../Assets/Svg/plus-icon.svg'
-
-
+import user from "../../../Assets/Svg/user.svg"
 
 const Leftside = (props) => {
   return (
@@ -13,11 +12,18 @@ const Leftside = (props) => {
         <UserInfo>
           <CardBackground />
           <a>
-            <Photo />
+            <Photo> 
+            {/* {props.user.photoURL ? (
+              <img src={props.user.photoURL} alt=""/>
+              ) : ( 
+              <img src={user} alt="" />
+              )} */}
+
+              </Photo>
             <Link>Welcome, { props.user ? props.user.displayName : 'Athlete'}!</Link>
           </a>
           <a>
-            <AddPhotoText>Add a photo</AddPhotoText>
+            {/* <AddPhotoText>Add a photo</AddPhotoText> */}
           </a>
         </UserInfo>
         <Widget>
@@ -38,19 +44,19 @@ const Leftside = (props) => {
       </ArtCard>
 
       <CommunityCard>
-        <a>
+        <a href='' target="_blank">
           <span>Groups</span>
         </a>
-        <a>
+        <a href='' target="_blank">
           <span>
             Events
             <img src={plus} alt="" />
           </span>
         </a>
-        <a>
+        <a href='' target="_blank">
           <span>Follow Hashtags</span>
         </a>
-        <a>
+        <a href='' target="_blank">
           <span>Discover more</span>
         </a>
       </CommunityCard>
@@ -82,7 +88,7 @@ const UserInfo = styled.div`
 `;
 
 const CardBackground = styled.div`
-  background: url("/images/card-bg.svg");
+  background-image: url("https://maveriklacrosse.com/wp-content/uploads/2017/10/New-Arrivals_00.jpg");
   background-position: center;
   background-size: 462px;
   height: 54px;
@@ -91,7 +97,6 @@ const CardBackground = styled.div`
 
 const Photo = styled.div`
   box-shadow: none;
-  background-image: url("");
   width: 72px;
   height: 72px;
   box-sizing: border-box;
@@ -103,6 +108,19 @@ const Photo = styled.div`
   border: 2px solid white;
   margin: -38px auto 12px;
   border-radius: 50%;
+    img{
+      box-shadow: none;
+  width: 72px;
+  height: 72px;
+  box-sizing: border-box;
+  background-clip: content-box;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid white;
+  margin: auto;
+  border-radius: 50%;
+    }
 `;
 
 const Link = styled.div`
@@ -182,8 +200,13 @@ const CommunityCard = styled(ArtCard)`
     color: black;
     padding: 4px 12px 4px 12px;
     font-size: 12px;
+    outline: none;
+    border: none;
     &:hover {
-      color: #0a66c2;
+      color: gold;
+      outline: none;
+    border: none;
+
     }
     span {
       display: flex;
