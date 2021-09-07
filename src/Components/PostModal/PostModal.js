@@ -194,9 +194,11 @@ const Header = styled.div`
             color: rgba(0, 0, 0, 0.6);
             border: none;
             border-radius: 50px;
+            cursor: pointer;
                 svg,
                 img{
             pointer-events: none;
+            
         
         }
         }
@@ -281,6 +283,7 @@ const PostButton = styled.button`
             &:hover {
                 background: ${(props) => (props.disabled ? 'rgba(0, 0, 0, 0.8 )' : 'black' )}; 
                 color: ${(props) => (props.disabled ? 'black' : 'gold' )}; 
+                cursor: pointer;
             }
 `;
 
