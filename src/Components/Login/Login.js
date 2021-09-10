@@ -5,7 +5,7 @@ import { Redirect } from 'react-router';
 import './Login.css';
 import Logo from '../../Assets/Logo/STM.png';
 import google from '../../Assets/Svg/google.svg';
-import hero from '../../Assets/Svg/Main.svg';
+import hero from '../../Assets/Svg/Main_1.svg';
 
 
 const Login = (props) => {

@@ -99,14 +99,15 @@
     text-align: center;
     margin-top: 30px;
     padding-bottom: 10px;
-    color: gold;
+    color: black;
   }
   
   .contact__P {
     text-align: center;
-    margin-top: 30px;
-    padding-bottom: 10px;
-    color: gold;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    font-weight: 700;
+    color: black;
   }
   
   
