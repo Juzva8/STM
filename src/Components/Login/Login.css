@@ -5,4 +5,9 @@
             justify-content: center!important;
             min-height: 0px;
         }
+        .Container__login{
+         margin-left: 10px;
+         font-size:12px;
+        }
+    
     }

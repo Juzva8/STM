@@ -10,7 +10,6 @@ const Rightside = (props) => {
         <Title>
           <h2>Follow us on social media</h2>
         </Title>
-
         <FeedList>
           <li>
             <a>
@@ -160,11 +159,15 @@ const Recommendation = styled.a`
 `;
 
 const BannerCard = styled(FollowCard)`
-height: 80%;
+    height: 100%;
 
   img {
     width: 100%;
     height: 100%;
+  }
+  @media (max-width: 768px) {
+
+  height: 400px;
   }
 `;
 

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { getUserAuth } from './actions';
 import { connect } from 'react-redux'
 import Login from './Components/Login/Login'
-import Footer from './Components/Footer/Footer'
+// import Footer from './Components/Footer/Footer'
 import Contact from './Pages/Contact/Contact'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
@@ -26,7 +26,7 @@ function App(props) {
             <Home />
           </Route>
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
       </Router>
   );
 }

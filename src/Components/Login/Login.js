@@ -16,7 +16,7 @@ const Login = (props) => {
         <a href="/">
           <img src={Logo} alt="" />
         </a>
-        <div>
+        <div className='Container__login'>
         <Join onClick = {() => props.signIn()}>Login</Join>
           <a href="/contact">
           <ContactUs>Contact Us</ContactUs>
@@ -59,15 +59,17 @@ const Nav = styled.nav`
         padding-top: 10px;
         height 30px;
         @media (max-width: 768px) {
-          height 20px;
+          height 14px;
         }
     }
+
   & > a {
     width: 135px;
     height: 34px;
     @media (max-width: 768px) {
       padding: 0 5px;
     }
+    
   }
 `;
 
@@ -88,6 +90,11 @@ const Join = styled.a`
     cursor: pointer;
     text-decoration: none;
   }
+  @media (max-width: 768px) {
+    margin-right:0px;
+    margin-left: 26px;
+    font-size: 14px;
+  }
 `;
 
 
@@ -107,6 +114,11 @@ const ContactUs = styled.a`
     background-color: black;
     color: gold;
   }
+  @media (max-width: 768px) {
+    margin-right:0px;
+    font-size: 14px;
+    font-weight: 400;
+  }
 `;
 
 const Section = styled.section`
@@ -123,8 +135,7 @@ const Section = styled.section`
   align-items: center;
   margin: auto;
   @media (max-width: 768px) {
-    margin: auto;
-    min-height: 0px;
+    align-items: center;
   }
 `;
 
@@ -138,9 +149,11 @@ const Hero = styled.div`
     line-height: 70px;
     @media (max-width: 768px) {
       text-align: center;
-      font-size: 20px;
+      font-size: 16px;
+      font-weight: 400;
       width: 100%;
       line-height: 2;
+      text-align:center!important;
     }
   }
   h5 {
@@ -150,9 +163,9 @@ const Hero = styled.div`
     font-weight: 300;
     line-height: 25px;
     @media (max-width: 768px) {
-      text-align: center;
+      text-align:center!important;
       font-size: 16px;
-      width: 90%;
+      width: 100%;
       line-height: 1;
     }
   }
@@ -170,10 +183,9 @@ const Hero = styled.div`
       width: initial;
       position: initial;
       height: initial;
-      max-height: 540px
-
-      
+      max-height: 340px   
     }
+
   }
 `;
 
@@ -182,7 +194,6 @@ const Form = styled.div`
   width: 408px;
   @media (max-width: 768px) {
     margin-top: 20px;
-    
   }
 `;
 
@@ -209,6 +220,11 @@ const Google = styled.button`
     background-color: rgba(207, 207, 207, 0.25);
     color: rgba(0, 0, 0, 0.75);
       
+  }
+  @media (max-width: 768px) {
+    margin-top: 5px;
+    align-items: center;
+
   }
 `;
 
