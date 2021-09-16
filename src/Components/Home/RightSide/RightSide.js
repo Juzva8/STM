@@ -57,6 +57,7 @@ const Rightside = (props) => {
 <iframe 
             title="STM" 
             src="https://www.ncaa.com/scoreboard/lacrosse-men/d1"
+            backgroundColor= '#a5a7a3'
             width="440" 
             height="100%" 
             style={{border: "none", overflow: "hidden" }}
@@ -72,6 +73,7 @@ const Rightside = (props) => {
 
 const Container = styled.div`
   grid-area: rightside;
+  
 `;
 
 const FollowCard = styled.div`

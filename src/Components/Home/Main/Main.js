@@ -222,7 +222,7 @@ const ShareBox = styled(CommonCard)`
                         margin: 0 4px 0 -2px;
                     }
                     span {
-                        color: gold;
+                        color: black;
                 }
             }
         }

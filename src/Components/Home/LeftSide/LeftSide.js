@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { connect } from "react-redux";
-import widget from '../../../Assets/Svg/widget-icon.svg'
+import { InlineWidget } from "react-calendly";
 import item from '../../../Assets/Svg/item-icon.svg'
-import plus from '../../../Assets/Svg/plus-icon.svg'
-import user from "../../../Assets/Svg/user.svg"
+// import widget from '../../../Assets/Svg/widget-icon.svg'
+// import plus from '../../../Assets/Svg/plus-icon.svg'
+// import user from "../../../Assets/Svg/user.svg"
 
 const Leftside = (props) => {
   return (
@@ -27,13 +28,15 @@ const Leftside = (props) => {
           </a>
         </UserInfo>
         <Widget>
-          <a>
+          {/* <a>
             <div>
               <span>Connections</span>
               <span>Grow your network</span>
             </div>
             <img src={widget} alt="" />
-          </a>
+          </a> */}
+
+<InlineWidget url="https://calendly.com/strattonterrace/30min" />
         </Widget>
         <Item>
           <span>
@@ -43,7 +46,7 @@ const Leftside = (props) => {
         </Item>
       </ArtCard>
 
-      <CommunityCard>
+      {/* <CommunityCard>
         <a href='' target="_blank">
           <span>Groups</span>
         </a>
@@ -59,7 +62,7 @@ const Leftside = (props) => {
         <a href='' target="_blank">
           <span>Discover more</span>
         </a>
-      </CommunityCard>
+      </CommunityCard> */}
     </Container>
   );
 };

@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { signOutAPI } from '../../actions'
 
+import './Header.css'
 import Lion from '../../Assets/Logo/home-logo.png'
 import house from '../../Assets/Svg/nav-home.svg'
 import network from '../../Assets/Svg/nav-network.svg'
@@ -183,6 +184,7 @@ const Header = (props) => {
       position: absolute;
       top: 90px;
       background: black;
+      color:gold !important;
       border-radius: 5px;
       width: 80px;
       height: 40px;

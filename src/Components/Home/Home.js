@@ -28,6 +28,7 @@ const Home = (props) => {
 };
 
 const Container = styled.div`
+  background-color: #d6d5ceb0;
   padding-top: 52px;
   max-width: 100%;
 `;
@@ -40,6 +41,7 @@ const Container = styled.div`
 
 const Section = styled.section`
   min-height: 50px;
+
   margin-top: 150px;
   box-sizing: content-box;
   text-align: center;
@@ -49,7 +51,7 @@ const Section = styled.section`
   justify-content: center;
   h5 {
     text-align: center;
-    color: gold;
+    color: black;
     font-size: 14px;
     span {
       font-weight: 700;
