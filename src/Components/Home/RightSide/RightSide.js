@@ -66,6 +66,7 @@ const Rightside = (props) => {
             allowTransparency="true"  
             allow= "encrypted-media">
             </iframe>
+            
       </BannerCard>
     </Container>
   );
@@ -161,7 +162,7 @@ const Recommendation = styled.a`
 `;
 
 const BannerCard = styled(FollowCard)`
-    height: 100%;
+    height: 95%;
 
   img {
     width: 100%;
