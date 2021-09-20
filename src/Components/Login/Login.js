@@ -18,7 +18,7 @@ const Login = (props) => {
         </a>
         <div className='Container__login'>
         <Join onClick = {() => props.signIn()}>Login</Join>
-          <a href="/contact">
+          <a href="/contact" target="_blank">
           <ContactUs>Contact Us</ContactUs>
           </a>
         </div>
